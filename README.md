@@ -23,7 +23,8 @@ Terminal Font: JetBrainsMonoNL Nerd Font Mono (10pt)
 ```bash
 yay -S --needed --noconfirm git vim curl wget \
     nvim eza git-delta \
-    chezmoi
+    chezmoi \
+    zsh zimfw
 ```
 
 使用 chezmoi 同步 dotfiles
