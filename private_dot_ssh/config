@@ -1,0 +1,10 @@
+Include ~/.ssh/config.d/*
+
+Host *
+    AddKeysToAgent yes
+    IdentitiesOnly yes
+
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_github
