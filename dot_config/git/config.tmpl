@@ -1,0 +1,24 @@
+[user]
+    name = {{ .git.user.name }}
+    email = {{ .git.user.email }}
+
+[init]
+    defaultBranch = master
+
+[core]
+    editor = nvim
+    pager = delta
+    autocrlf = input
+
+[interactive]
+    diffFilter = delta --color-noly
+
+[delta]
+    navigate = true
+    dark = true
+
+[merge]
+    conflictStyle = zdiff3
+
+[include]
+    path = ~/.config/git/config_local
