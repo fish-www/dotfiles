@@ -1,0 +1,3 @@
+alias eza='eza --group-directories-first --color auto'
+alias ll='eza -l -g --time-style "+%Y-%m-%d %H:%M:%S"'
+alias l='ll -a'
