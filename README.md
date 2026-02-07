@@ -28,6 +28,13 @@ yay -S --needed --noconfirm git vim curl wget \
     fcitx5-rime rime-ice-git
 ```
 
+其他，按需安装
+
+```bash
+# https://github.com/sdkman/sdkman-cli
+curl -s https://get.sdkman.io | bash
+```
+
 使用 chezmoi 同步 dotfiles
 
 > [Use a hosted repo to manage your dotfiles across multiple machines](https://www.chezmoi.io/user-guide/setup/#use-a-hosted-repo-to-manage-your-dotfiles-across-multiple-machines)
