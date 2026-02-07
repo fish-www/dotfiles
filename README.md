@@ -25,7 +25,8 @@ yay -S --needed --noconfirm git vim curl wget \
     nvim eza git-delta \
     chezmoi \
     zsh zimfw \
-    fcitx5-rime rime-ice-git
+    fcitx5-rime rime-ice-git \
+    uv
 ```
 
 其他，按需安装
