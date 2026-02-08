@@ -40,3 +40,25 @@ chezmoi diff
 # 应用变更
 chezmoi apply
 ```
+
+## usage
+
+### chezmoi config
+
+使用了 [chezmoi format tmpl](https://www.chezmoi.io/reference/special-files/chezmoi-format-tmpl/) 来生成 chezmoi 的 [配置文件](https://www.chezmoi.io/reference/configuration-file/#__tabbed_1_3)
+
+在 `chezmoi init` 时会询问一些问题来生成配置文件，之后可以修改 `~/.config/chezmoi/chezmoi.toml` 来调整配置
+
+### ssh
+
+- 在 `~/.ssh/config` 中使用了 `Include` 来包含 `~/.ssh/config.d/*` 中的配置文件，可在此目录中添加本地的 ssh 配置
+
+- 使用 `~/.ssh/id_github` 来存储 GitHub 的 SSH 密钥，可通过 `ssh-keygen` 来生成，并配置到 github 上
+
+    ```bash
+    ssh-keygen -t ed25519 -f ~/.ssh/id_github -C "your comment"
+    ```
+
+### git
+
+- 配置统一存放在 `~/.config/git/config` 中，使用了 `Include` 来包含 `~/.config/git/config_local` 配置文件，可在此文件中添加本地的 git 配置（为什么 git 的 Include 不支持通配符 :sob:）
