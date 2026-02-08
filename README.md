@@ -20,9 +20,15 @@ Terminal Font: JetBrainsMonoNL Nerd Font Mono (10pt)
 
 建议安装
 
+> 命令行工具参考：
+>
+> - [Core utilities](https://wiki.archlinux.org/title/Core_utilities)
+> - [Modern Unix](https://github.com/ibraheemdev/modern-unix)
+
 ```bash
 yay -S --needed --noconfirm git vim curl wget \
-    nvim eza git-delta \
+    nvim eza git-delta bat btop duf dust tldr \
+    fd jq ripgrep ripgrep-all fzf zoxide \
     chezmoi \
     zsh zimfw \
     fcitx5-rime rime-ice-git \
@@ -65,9 +71,9 @@ chezmoi apply
 
 - 使用 `~/.ssh/id_github` 来存储 GitHub 的 SSH 密钥，可通过 `ssh-keygen` 来生成，并配置到 github 上
 
-    ```bash
-    ssh-keygen -t ed25519 -f ~/.ssh/id_github -C "your comment"
-    ```
+  ```bash
+  ssh-keygen -t ed25519 -f ~/.ssh/id_github -C "your comment"
+  ```
 
 ### git
 
