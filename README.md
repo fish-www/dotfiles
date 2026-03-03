@@ -26,7 +26,7 @@ Terminal Font: 0xProto Nerd Font Mono (10pt)
 > - [Modern Unix](https://github.com/ibraheemdev/modern-unix)
 
 ```bash
-yay -S --needed --noconfirm git vim curl wget \
+paru -S --needed --noconfirm git vim curl wget \
     nvim eza git-delta bat btop duf dust tldr \
     fd jq ripgrep ripgrep-all fzf zoxide \
     chezmoi \
@@ -38,7 +38,7 @@ yay -S --needed --noconfirm git vim curl wget \
 字体
 
 ```bash
-yay -S --needed --noconfirm \
+paru -S --needed --noconfirm \
     ttf-0xproto-nerd ttf-jetbrains-mono-nerd \
     noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 ```
