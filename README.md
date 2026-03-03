@@ -10,10 +10,10 @@ WM: KWin (Wayland)
 WM Theme: Sweet-Mars
 Theme: Breeze (SweetAmbarBlue) [Qt], Breeze-Dark [GTK2], Breeze [GTK3]
 Icons: candy-icons [Qt], candy-icons [GTK2/3/4]
-Font: JetBrainsMonoNL Nerd Font Mono (10pt) [Qt], JetBrainsMonoNL Nerd Font Mono (10pt) [GTK2/3/4]
+Font: 0xProto Nerd Font Mono (10pt) [Qt], 0xProto Nerd Font Mono (10pt) [GTK2/3/4]
 Cursor: Sweet (24px)
 Terminal: konsole 25.12.1
-Terminal Font: JetBrainsMonoNL Nerd Font Mono (10pt)
+Terminal Font: 0xProto Nerd Font Mono (10pt)
 ```
 
 ## install
@@ -33,6 +33,14 @@ yay -S --needed --noconfirm git vim curl wget \
     zsh zimfw \
     fcitx5-rime rime-ice-git \
     uv
+```
+
+字体
+
+```bash
+yay -S --needed --noconfirm \
+    ttf-0xproto-nerd ttf-jetbrains-mono-nerd \
+    noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 ```
 
 其他，按需安装
