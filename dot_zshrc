@@ -118,10 +118,6 @@ source ${ZIM_HOME}/init.zsh
 # alias
 [[ ! -f ~/.zsh_alias ]] || source ~/.zsh_alias
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 # zoxide
 eval "$(zoxide init zsh)"
 
