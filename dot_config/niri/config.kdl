@@ -623,6 +623,9 @@ binds {
 
     // fcitx5
     Mod+F1 { spawn-sh "pkill fcitx5 || fcitx5"; }
+
+    // waybar
+    Mod+F12 { spawn-sh "pkill waybar || true && waybar"; }
 }
 
 // === miscellaneous ===
