@@ -621,3 +621,10 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 }
+
+// === miscellaneous ===
+
+environment {
+    LANG "zh_CN.UTF-8"
+    LC_CTYPE "en_US.UTF-8"
+}
