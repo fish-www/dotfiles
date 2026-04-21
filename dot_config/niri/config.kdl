@@ -620,6 +620,9 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
+
+    // fcitx5
+    Mod+F1 { spawn-sh "pkill fcitx5 || fcitx5"; }
 }
 
 // === miscellaneous ===
@@ -627,4 +630,7 @@ binds {
 environment {
     LANG "zh_CN.UTF-8"
     LC_CTYPE "en_US.UTF-8"
+    XMODIFIERS "@im=fcitx"
 }
+
+spawn-at-startup "fcitx5" "-d"
