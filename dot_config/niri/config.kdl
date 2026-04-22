@@ -673,3 +673,6 @@ window-rule {
 
     open-floating true
 }
+
+// === include other configs ===
+include "local-config.kdl"
