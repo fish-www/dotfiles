@@ -656,3 +656,20 @@ spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
 spawn-at-startup "mako"
+
+// === window rules ===
+// use `niri msg pick-window` to get the app-id and title of a window for writing rules.
+
+// jetbrains IDEs
+window-rule {
+    match app-id=r#"^jetbrains-.*$"# title="^欢迎访问 .*$"
+    
+    open-floating true
+}
+
+// flclash
+window-rule {
+    match app-id="com.follow.clash" title="FLClash"
+
+    open-floating true
+}
