@@ -5,20 +5,15 @@ fastfetch
 ```fastfetch
 OS: Arch Linux x86_64
 Shell: zsh 5.9
-DE: KDE Plasma 6.5.5
-WM: KWin (Wayland)
-WM Theme: Sweet-Mars
-Theme: Breeze (SweetAmbarBlue) [Qt], Breeze-Dark [GTK2], Breeze [GTK3]
-Icons: candy-icons [Qt], candy-icons [GTK2/3/4]
-Font: 0xProto Nerd Font Mono (10pt) [Qt], 0xProto Nerd Font Mono (10pt) [GTK2/3/4]
+WM: niri 25.11 (Wayland)
+Font: 0xProto Nerd Font Mono (10pt) [GTK2/3/4]
 Cursor: Sweet (24px)
-Terminal: konsole 25.12.1
-Terminal Font: 0xProto Nerd Font Mono (10pt)
+Terminal: tmux 3.6a
 ```
 
 ## install
 
-建议安装
+### packages
 
 > 命令行工具参考：
 >
@@ -42,6 +37,22 @@ paru -S --needed --noconfirm \
     ttf-0xproto-nerd ttf-jetbrains-mono-nerd \
     noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 ```
+
+> niri
+> 
+> 参考 [Getting Startted](https://niri-wm.github.io/niri/Getting-Started.html)
+
+```bash
+paru -S --needed --noconfirm \
+    niri xwayland-satellite \
+    xdg-desktop-portal-gnome xdg-desktop-portal-gtk \
+    alacritty fuzzel swaylock \
+    matugen cava qt6-multimedia-ffmpeg \
+    libnotify mako polkit-gnome \
+    waybar ttf-jetbrains-mono-nerd otf-font-awesome
+```
+
+### init
 
 使用 chezmoi 同步 dotfiles
 
@@ -79,3 +90,9 @@ chezmoi apply
 ### git
 
 - 配置统一存放在 `~/.config/git/config` 中，使用了 `Include` 来包含 `~/.config/git/config_local` 配置文件，可在此文件中添加本地的 git 配置（为什么 git 的 Include 不支持通配符 :sob:）
+
+### niri
+
+需要手动创建一下 `~/.config/niri/local-config.kdl`，即使没有要写的配置
+
+因为在 niri 的 `config.kdl` 中 include 了 `local-config.kdl`，用来存放机器相关的配置，而 niri 要到下个版本才能支持 [可选 include](https://niri-wm.github.io/niri/Configuration%3A-Include.html#optional-includes)
