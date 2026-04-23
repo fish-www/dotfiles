@@ -674,5 +674,12 @@ window-rule {
     open-floating true
 }
 
+// qq login
+window-rule {
+    match app-id="QQ" title="QQ"
+
+    open-floating true
+}
+
 // === include other configs ===
 include "local-config.kdl"
