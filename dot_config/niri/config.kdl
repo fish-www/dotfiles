@@ -669,7 +669,7 @@ window-rule {
 
 // flclash
 window-rule {
-    match app-id="com.follow.clash" title="FLClash"
+    match app-id="com.follow.clash" title="FlClash"
 
     open-floating true
 }
