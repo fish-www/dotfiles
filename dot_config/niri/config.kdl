@@ -635,7 +635,7 @@ binds {
 // === miscellaneous ===
 
 environment {
-    LANG "zh_CN.UTF-8"
+    LANG "en_US.UTF-8"
     LC_CTYPE "en_US.UTF-8"
     XMODIFIERS "@im=fcitx"
 }
