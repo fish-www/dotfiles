@@ -25,7 +25,7 @@ paru -S --needed --noconfirm git vim curl wget \
     nvim eza git-delta bat btop duf dust tldr \
     fd jq ripgrep ripgrep-all fzf zoxide \
     chezmoi \
-    zsh zimfw \
+    zsh zimfw tmux\
     fcitx5-rime rime-ice-git \
     uv
 ```
