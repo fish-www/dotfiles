@@ -51,7 +51,7 @@ paru -S --needed --noconfirm \
     matugen cava qt6-multimedia-ffmpeg \
     libnotify mako polkit-gnome \
     waybar ttf-jetbrains-mono-nerd otf-font-awesome \
-    qt6ct
+    qt6ct breeze breeze-icons
 ```
 
 ### init
