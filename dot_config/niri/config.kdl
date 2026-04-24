@@ -662,6 +662,9 @@ spawn-at-startup "mako"
 // dark mode
 spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "color-scheme" "prefer-dark"
 
+// gnome-keyring
+spawn-at-startup "gnome-keyring-daemon" "--start" "--components=secrets"
+
 // === window rules ===
 // use `niri msg pick-window` to get the app-id and title of a window for writing rules.
 
