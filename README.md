@@ -26,7 +26,7 @@ paru -S --needed --noconfirm git vim curl wget \
     fd jq ripgrep ripgrep-all fzf zoxide \
     chezmoi \
     zsh zimfw tmux\
-    fcitx5-rime rime-ice-git \
+    fcitx5-rime rime-ice-git fcitx5-configtool \
     uv
 ```
 
