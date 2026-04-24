@@ -22,7 +22,7 @@ Terminal: tmux 3.6a
 
 ```bash
 paru -S --needed --noconfirm git vim curl wget \
-    nvim eza git-delta bat btop duf dust tldr \
+    nvim eza git-delta bat btop duf dust gdu tldr \
     fd jq ripgrep ripgrep-all fzf zoxide \
     chezmoi \
     zsh zimfw tmux\
