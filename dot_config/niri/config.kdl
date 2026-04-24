@@ -638,6 +638,8 @@ environment {
     LANG "en_US.UTF-8"
     LC_CTYPE "en_US.UTF-8"
     XMODIFIERS "@im=fcitx"
+    // dark
+    QT_QPA_PLATFORMTHEME "qt6ct"
 }
 
 cursor {
@@ -656,6 +658,9 @@ spawn-at-startup "fcitx5" "-d"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
 spawn-at-startup "mako"
+
+// dark mode
+spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "color-scheme" "prefer-dark"
 
 // === window rules ===
 // use `niri msg pick-window` to get the app-id and title of a window for writing rules.

@@ -49,7 +49,8 @@ paru -S --needed --noconfirm \
     alacritty fuzzel swaylock \
     matugen cava qt6-multimedia-ffmpeg \
     libnotify mako polkit-gnome \
-    waybar ttf-jetbrains-mono-nerd otf-font-awesome
+    waybar ttf-jetbrains-mono-nerd otf-font-awesome \
+    qt6ct
 ```
 
 ### init
