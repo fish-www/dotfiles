@@ -95,6 +95,8 @@ chezmoi apply
 
 ### niri
 
-需要手动创建一下 `~/.config/niri/local-config.kdl`，即使没有要写的配置
+- 需要手动创建一下 `~/.config/niri/local-config.kdl`，即使没有要写的配置
 
-因为在 niri 的 `config.kdl` 中 include 了 `local-config.kdl`，用来存放机器相关的配置，而 niri 要到下个版本才能支持 [可选 include](https://niri-wm.github.io/niri/Configuration%3A-Include.html#optional-includes)
+  因为在 niri 的 `config.kdl` 中 include 了 `local-config.kdl`，用来存放机器相关的配置，而 niri 要到下个版本才能支持 [可选 include](https://niri-wm.github.io/niri/Configuration%3A-Include.html#optional-includes)
+
+- 关于 dolphin 的深色模式，需要先启动 qt6ct，配置 color theme 为深色模式的主题
