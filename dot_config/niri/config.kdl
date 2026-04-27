@@ -640,6 +640,14 @@ environment {
     XMODIFIERS "@im=fcitx"
     // dark
     QT_QPA_PLATFORMTHEME "qt6ct"
+
+    QT_QPA_PLATFORM "wayland"
+    QT_IM_MODULE "fcitx"
+    GTK_IM_MODULE "fcitx" 
+    SDL_IM_MODULE "fcitx"
+    XDG_SESSION_TYPE "wayland"
+    XDG_CURRENT_DESKTOP "niri"
+    SDL_VIDEODRIVER "wayland,x11"
     GTK_THEME "Adwaita:dark"
 }
 
@@ -683,9 +691,20 @@ window-rule {
     open-floating true
 }
 
-// qq login
+// qq popup
 window-rule {
     match app-id="QQ" title="QQ"
+    match app-id="QQ" title=r#".*的聊天记录$"#
+    match app-id="QQ" title="图片查看器"
+    match app-id="QQ" title="视频播放器"
+
+    open-floating true
+}
+
+// wechat popup
+window-rule {
+    match app-id="wechat" title=r#".*的聊天记录$"#
+    match app-id="wechat" title="图片和视频"
 
     open-floating true
 }
