@@ -100,3 +100,17 @@ chezmoi apply
   因为在 niri 的 `config.kdl` 中 include 了 `local-config.kdl`，用来存放机器相关的配置，而 niri 要到下个版本才能支持 [可选 include](https://niri-wm.github.io/niri/Configuration%3A-Include.html#optional-includes)
 
 - 关于 dolphin 的深色模式，需要先启动 qt6ct，配置 color theme 为深色模式的主题
+
+## other
+
+### Wayland ↔ X11 双向剪贴板同步工具
+
+> 解决 linuxqq 剪贴板与其他程序不同步的问题
+
+使用 [clipsync](https://github.com/123hi123/clipsync)
+
+```bash
+paru -S clipsync-git
+
+systemctl --user enable --now clipsync
+```
