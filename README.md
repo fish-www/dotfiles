@@ -101,6 +101,12 @@ chezmoi apply
 
 - 关于 dolphin 的深色模式，需要先启动 qt6ct，配置 color theme 为深色模式的主题
 
+### qq
+
+使用的是 `linuxqq-nt-bwrap` 包，所以配置了目录映射，手动创建一个 `~/Downloads/QQ` 目录，然后启动 qq，配置下载目录为此目录
+
+也可以直接配置成 `~/Downloads`，不过这样会和其他程序下载的文件混在一起，所以还是放子目录了
+
 ## other
 
 ### Wayland ↔ X11 双向剪贴板同步工具
@@ -110,7 +116,7 @@ chezmoi apply
 使用 [clipsync](https://github.com/123hi123/clipsync)
 
 ```bash
-paru -S clipsync-git
+paru -S comalot-clipsync-git
 
 systemctl --user enable --now clipsync
 ```
