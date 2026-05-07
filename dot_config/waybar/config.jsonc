@@ -113,6 +113,10 @@
 
     "temperature": {
         "format": "{icon} {temperatureC}°C",
+	// 因设备而异，查找需要的热区见：
+	// https://github.com/Alexays/Waybar/wiki/Module:-Temperature#finding-your-thermal-zone
+	"thermal-zone": 1,
+	"interval": 1,
         "critical-threshold": 80,
         "format-icons": ["󱃃", "󰔏", "󱃂"],
         "on-click": "alacritty -e btop",
