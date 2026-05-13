@@ -4,3 +4,7 @@ alias l='ll -a'
 
 # short
 alias t="tmux"
+
+# fix terraria im issue
+# tr 本身支持输入法，但是从 steam 启动就会用不了，这里直接绕过 steam
+alias tr='tmux -L tr-client new-session -d -s tr-client \; send-keys -t tr-client "cd \"$HOME/.local/share/Steam/steamapps/common/Terraria\" && ./Terraria; tmux -L tr-client kill-server" Enter'
