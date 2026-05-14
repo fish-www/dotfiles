@@ -15,6 +15,10 @@ Terminal: tmux 3.6a
 
 ### packages
 
+```bash
+paru -S --needed --noconfirm pacman-contrib
+```
+
 > 命令行工具参考：
 >
 > - [Core utilities](https://wiki.archlinux.org/title/Core_utilities)
