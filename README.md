@@ -56,7 +56,8 @@ paru -S --needed --noconfirm \
     libnotify mako polkit-gnome \
     waybar ttf-jetbrains-mono-nerd otf-font-awesome \
     qt6ct breeze breeze-icons gnome-themes-extra \
-    slurp grim satty
+    slurp grim satty \
+    archlinux-xdg-menu
 ```
 
 ### init
@@ -104,7 +105,13 @@ chezmoi apply
 
   因为在 niri 的 `config.kdl` 中 include 了 `local-config.kdl`，用来存放机器相关的配置，而 niri 要到下个版本才能支持 [可选 include](https://niri-wm.github.io/niri/Configuration%3A-Include.html#optional-includes)
 
+### dolphin
+
 - 关于 dolphin 的深色模式，需要先启动 qt6ct，配置 color theme 为深色模式的主题
+- 关于 dolphin 的文件默认打开方式，需要执行：
+  ```bash
+  XDG_MENU_PREFIX=arch- kbuildsycoca6 --noincremental
+  ```
 
 ### qq
 
