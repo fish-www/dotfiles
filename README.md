@@ -112,6 +112,10 @@ chezmoi apply
   ```bash
   XDG_MENU_PREFIX=arch- kbuildsycoca6 --noincremental
   ```
+- 为了避免某些应用默认使用 nautilus 作为文件管理器，可以卸载 nautilus
+  ```bash
+  pacman -Rdd nautilus
+  ```
 
 ### qq
 
