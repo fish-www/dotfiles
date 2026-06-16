@@ -5,3 +5,6 @@ alias l='ll -a'
 # short
 alias t="tmux"
 
+# pi 默认使用 gondolin
+alias pi='pi -e ~/.pi/agent/extensions/gondolin'
+

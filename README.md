@@ -123,6 +123,34 @@ chezmoi apply
 
 也可以直接配置成 `~/Downloads`，不过这样会和其他程序下载的文件混在一起，所以还是放子目录了
 
+### pi
+
+安装 [pi](https://github.com/earendil-works/pi)
+
+```bash
+paru -S --needed --noconfirm pnpm
+pnpm install -g --ignore-scripts @earendil-works/pi-coding-agent
+```
+
+配置了 pi 的别名，默认使用 gondolin，通过别名使用需要先安装 gondolin 和 qemu，参考 [containerization#gondolin](https://pi.dev/docs/latest/containerization#gondolin)
+
+安装 gondolin
+
+```bash
+git clone https://github.com/earendil-works/pi.git
+cd pi
+mkdir ~/.pi/agent/extensions
+cp -R packages/coding-agent/examples/extensions/gondolin ~/.pi/agent/extensions/gondolin
+cd ~/.pi/agent/extensions/gondolin
+npm install --ignore-scripts
+```
+
+安装 qemu
+
+```bash
+paru -S --needed --noconfirm qemu-base
+```
+
 ## other
 
 ### Wayland ↔ X11 双向剪贴板同步工具
