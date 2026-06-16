@@ -6,3 +6,7 @@ export PATH="$HOME/.local/bin:$PATH"
 # JAVA_HOME
 export JAVA_HOME=/usr/lib/jvm/default
 export PATH=$JAVA_HOME/bin:$PATH
+
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+export PATH="$PNPM_HOME/bin:$PATH"
