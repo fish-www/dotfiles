@@ -5,6 +5,9 @@ alias l='ll -a'
 # short
 alias t="tmux"
 
-# pi 默认使用 gondolin
-alias pi='pi -e ~/.pi/agent/extensions/gondolin'
+# 不使用 gondolin 的 pi（pi 默认使用所有自动发现的扩展）
+alias pi-host='pi --no-extensions --no-context-files'
+
+# 纯聊天模式: 无任何工具
+alias pi-ask='pi --no-tools --no-extensions --no-context-files'
 
