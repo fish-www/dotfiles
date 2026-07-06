@@ -604,15 +604,15 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Print { screenshot; }
+    Print { spawn "mark-shot-niri" "region"; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
     // Capture
-    Mod+S            hotkey-overlay-title="Screenshot (region)" { spawn "dfr-screenshot" "region"; }
-    Mod+Shift+S      hotkey-overlay-title="Screenshot (window)" { spawn "dfr-screenshot" "window"; }
-    Mod+Ctrl+S       hotkey-overlay-title="Screenshot (monitor: focused)" { spawn "dfr-screenshot" "monitor-focused"; }
-    Mod+Ctrl+Shift+S hotkey-overlay-title="Screenshot (monitor: all)" { spawn "dfr-screenshot" "monitor-all"; }
+    Mod+S            hotkey-overlay-title="Screenshot (region)" { spawn "mark-shot-niri" "region"; }
+    Mod+Shift+S      hotkey-overlay-title="Screenshot (window)" { spawn "mark-shot-niri" "window"; }
+    Mod+Ctrl+S       hotkey-overlay-title="Screenshot (monitor: focused)" { spawn "mark-shot-niri" "monitor-focused"; }
+    Mod+Ctrl+Shift+S hotkey-overlay-title="Screenshot (monitor: all)" { spawn "mark-shot-niri" "monitor-all"; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here

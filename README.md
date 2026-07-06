@@ -56,7 +56,7 @@ paru -S --needed --noconfirm \
     libnotify mako polkit-gnome \
     waybar ttf-jetbrains-mono-nerd otf-font-awesome \
     qt6ct breeze breeze-icons gnome-themes-extra \
-    slurp grim satty \
+    slurp grim satty mark-shot \
     archlinux-xdg-menu
 ```
 

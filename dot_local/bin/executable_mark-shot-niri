@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# Screenshot wrapper: mark-shot handles region / fullscreen / multi-monitor
+# natively; only window screenshots need niri cooperation.
+set -o errexit
+set -o pipefail
+set -o nounset
+
+MODE="${1:-region}"
+
+case "${MODE}" in
+region)
+  exec mark-shot --default-tool rectangle
+  ;;
+monitor-focused)
+  exec mark-shot --default-tool rectangle --fullscreen
+  ;;
+monitor-all)
+  exec mark-shot --default-tool rectangle --all-outputs --fullscreen
+  ;;
+window)
+  TMPFILE="$(mktemp --suffix=.png)"
+  cleanup() { rm -f "${TMPFILE}"; }
+  trap cleanup EXIT
+
+  niri msg action screenshot-window
+
+  # Poll for clipboard data to be ready
+  for _ in $(seq 1 20); do
+    if wl-paste --list-types 2>/dev/null | grep -q "image/png"; then
+      break
+    fi
+    sleep 0.1
+  done
+
+  wl-paste --type image/png > "${TMPFILE}"
+  exec mark-shot --default-tool rectangle "${TMPFILE}"
+  ;;
+
+*)
+  echo "'${MODE}' is not supported. Valid modes: region, monitor-focused, monitor-all, window" >&2
+  exit 1
+  ;;
+esac
