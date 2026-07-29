@@ -9,13 +9,13 @@ MODE="${1:-region}"
 
 case "${MODE}" in
 region)
-  exec mark-shot --default-tool rectangle
+  exec mark-shot
   ;;
 monitor-focused)
-  exec mark-shot --default-tool rectangle --fullscreen
+  exec mark-shot --fullscreen
   ;;
 monitor-all)
-  exec mark-shot --default-tool rectangle --all-outputs --fullscreen
+  exec mark-shot --all-outputs --fullscreen
   ;;
 window)
   TMPFILE="$(mktemp --suffix=.png)"
@@ -33,7 +33,7 @@ window)
   done
 
   wl-paste --type image/png > "${TMPFILE}"
-  exec mark-shot --default-tool rectangle "${TMPFILE}"
+  exec mark-shot "${TMPFILE}"
   ;;
 
 *)
