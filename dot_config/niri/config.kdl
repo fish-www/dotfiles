@@ -651,7 +651,7 @@ environment {
     QT_QPA_PLATFORMTHEME "qt6ct"
     QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
 
-    QT_IM_MODULE "fcitx"
+    QT_IM_MODULES "wayland;fcitx"
     GTK_IM_MODULE "fcitx" 
     SDL_IM_MODULE "fcitx"
     XDG_SESSION_TYPE "wayland"
