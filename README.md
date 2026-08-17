@@ -31,7 +31,7 @@ paru -S --needed --noconfirm git vim curl wget \
     chezmoi \
     zsh zimfw tmux\
     fcitx5-rime rime-ice-git fcitx5-configtool \
-    uv
+    uv thefuck
 ```
 
 字体
