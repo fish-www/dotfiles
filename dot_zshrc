@@ -126,3 +126,14 @@ source <(fzf --zsh)
 
 # thefuck
 eval $(thefuck --alias)
+
+# history
+HISTSIZE=100000
+SAVEHIST=100000
+HISTFILE=~/.zsh_history
+
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
+unsetopt SHARE_HISTORY
