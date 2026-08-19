@@ -21,3 +21,6 @@ swayimg.viewer.on_key("x", function() swayimg.viewer.mark_image() end)
 swayimg.viewer.on_key("space", function() swayimg.viewer.animation = not swayimg.viewer.animation end)
 swayimg.viewer.on_key("q", function() swayimg.exit() end)
 swayimg.viewer.on_key("Escape", function() swayimg.exit() end)
+
+-- 中文字体
+swayimg.text.font = "Noto Sans CJK SC:lang=und"
