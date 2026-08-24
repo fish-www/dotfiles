@@ -1,0 +1,15 @@
+{
+  "lastChangelogVersion": "0.84.2",
+  "defaultProvider": "deepseek",
+  "defaultModel": "deepseek-v4-flash",
+  "defaultThinkingLevel": "high",
+  "theme": "dark",
+  "packages": [
+    "npm:@narumitw/pi-btw",
+    "npm:@gotgenes/pi-permission-system",
+    "npm:@ff-labs/pi-fff",
+    "npm:pi-context-view",
+    "npm:@cortexkit/pi-magic-context",
+    "npm:@narumitw/pi-lsp"
+  ]
+}
