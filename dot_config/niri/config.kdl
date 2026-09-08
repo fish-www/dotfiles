@@ -694,11 +694,32 @@ spawn-at-startup "gnome-keyring-daemon" "--start" "--components=secrets"
 // use `niri msg pick-window` to get the app-id and title of a window for writing rules.
 
 // jetbrains IDEs
+// ide 本体
+window-rule {
+    match app-id=r#"^jetbrains-.*$"#
+    
+    open-maximized true
+    open-floating false
+}
+// 欢迎页
 window-rule {
     match app-id=r#"^jetbrains-.*$"# title="^欢迎访问 .*$"
     
     open-floating true
 }
+// push
+window-rule {
+    match app-id=r#"^jetbrains-.*$"# title="^将提交推送到 .*$"
+    
+    open-floating true
+}
+// 在文件中查找
+window-rule {
+    match app-id=r#"^jetbrains-.*$"# title=""
+    
+    open-floating true
+}
+
 
 // flclash
 window-rule {
