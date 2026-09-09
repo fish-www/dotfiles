@@ -99,6 +99,34 @@ chezmoi apply
 
 - 配置统一存放在 `~/.config/git/config` 中，使用了 `Include` 来包含 `~/.config/git/config_local` 配置文件，可在此文件中添加本地的 git 配置（为什么 git 的 Include 不支持通配符 :sob:）
 
+### tmux
+
+插件用 [tpm](https://github.com/tmux-plugins/tpm) 管理；tpm 本体由 chezmoi 的 [external](https://www.chezmoi.io/reference/special-files/chezmoiexternal-format/) 拉取，插件目录就用 TPM 的默认值 `~/.config/tmux/plugins/`（因为 `~/.config/tmux/tmux.conf` 存在，TPM 会自动选这个路径）
+
+> 别对 `~/.config/tmux` 跑 `chezmoi add`：那会把 `plugins/` 下的插件 git 仓库一起扫进 dotfiles
+
+`chezmoi apply` 只会把 tpm 放好，插件还需要安装一次：
+
+进 tmux 后按 `prefix + I`（本仓库 prefix 是 `C-a`）
+
+插件只有 [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect)：手动保存/恢复会话、窗口、pane 布局和 cwd。
+
+常用按键：
+
+| 按键 | 作用 |
+| --- | --- |
+| `prefix + C-s` | 保存当前状态 |
+| `prefix + C-r` | 恢复上次保存的状态 |
+| `prefix + I` | 安装新加的插件 |
+| `prefix + U` | 更新插件 |
+| `prefix + M-u` | 删除已移除的插件 |
+
+存档在 `~/.local/share/tmux/resurrect/`，`last` 指向最近一次。重启前按 `prefix + C-s`，重启后进 tmux 按 `prefix + C-r`。
+
+注意：
+
+- 恢复的是布局、cwd 和 pane 的文本快照，不是进程状态；正在跑的编译、REPL 不会接续。`@resurrect-processes` 里的命令（默认列表加上 `ssh`）是恢复时重新执行
+
 ### niri
 
 - 需要手动创建一下 `~/.config/niri/local-config.kdl`，即使没有要写的配置
