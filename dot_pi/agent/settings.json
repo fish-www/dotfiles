@@ -10,6 +10,7 @@
     "npm:@ff-labs/pi-fff",
     "npm:pi-context-view",
     "npm:@cortexkit/pi-magic-context",
-    "npm:@narumitw/pi-lsp"
+    "npm:@narumitw/pi-lsp",
+    "https://github.com/ayghri/i-have-adhd"
   ]
 }
