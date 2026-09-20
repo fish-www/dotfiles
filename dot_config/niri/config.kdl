@@ -713,13 +713,6 @@ window-rule {
     
     open-floating true
 }
-// 在文件中查找
-window-rule {
-    match app-id=r#"^jetbrains-.*$"# title=""
-    
-    open-floating true
-}
-
 
 // flclash
 window-rule {
