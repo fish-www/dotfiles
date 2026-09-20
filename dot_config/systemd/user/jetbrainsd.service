@@ -1,0 +1,22 @@
+[Unit]
+Description=JetBrains Daemon
+# 必须 no：默认会隐式 After=basic.target，和下面的 Before=app.slice 组成依赖环
+DefaultDependencies=no
+After=session.slice
+# 早于 app.slice：登录时赢下单例；停止顺序反过来，于是客户端全部退完才停，没人能复活 daemon
+Before=app.slice xdg-desktop-autostart.target
+
+[Service]
+Type=simple
+# 必须离开 app.slice，否则和 Before=app.slice 自相矛盾（unit 隐式 After=自己的 slice）
+Slice=session.slice
+ExecStart=%h/.local/share/JetBrains/Daemon/bundles/current/jetbrainsd/bin/jetbrainsd run
+# 万一输竞态，别变成 2s 一次的 restart 循环
+SuccessExitStatus=81
+Restart=on-failure
+RestartSec=2
+TimeoutStopSec=5
+
+[Install]
+# 比 graphical-session.target 早，才抢得过 Toolbox
+WantedBy=default.target
