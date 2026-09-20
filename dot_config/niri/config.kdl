@@ -693,51 +693,41 @@ spawn-at-startup "gnome-keyring-daemon" "--start" "--components=secrets"
 // === window rules ===
 // use `niri msg pick-window` to get the app-id and title of a window for writing rules.
 
-// jetbrains IDEs
-// ide 本体
+// maximized
 window-rule {
+    // jetbrains
     match app-id=r#"^jetbrains-.*$"#
+    // firefox
+    match app-id="firefox-developer-edition"
+    // vscode
+    match app-id="code"
     
     open-maximized true
     open-floating false
 }
-// 欢迎页
-window-rule {
-    match app-id=r#"^jetbrains-.*$"# title="^欢迎访问 .*$"
-    
-    open-floating true
-}
-// push
-window-rule {
-    match app-id=r#"^jetbrains-.*$"# title="^将提交推送到 .*$"
-    
-    open-floating true
-}
 
-// flclash
+// floating
 window-rule {
+    // jetbrains
+    match app-id=r#"^jetbrains-.*$"# title="^欢迎访问 .*$"
+    match app-id=r#"^jetbrains-.*$"# title="^将提交推送到 .*$"
+
+    // flclash
     match app-id="com.follow.clash" title="FlClash"
 
-    open-floating true
-}
-
-// qq popup
-window-rule {
+    // qq popup
     match app-id="QQ" title="QQ"
     match app-id="QQ" title=r#".*的聊天记录$"#
     match app-id="QQ" title="图片查看器"
     match app-id="QQ" title="视频播放器"
 
-    open-floating true
-}
-
-// wechat popup
-window-rule {
+    // wechat popup
     match app-id="wechat" title=r#".*的聊天记录$"#
     match app-id="wechat" title="图片和视频"
 
     open-floating true
 }
+
 
 // === include other configs ===
 include "local-config.kdl"
