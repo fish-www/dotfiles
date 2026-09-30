@@ -27,3 +27,9 @@ Never simplify away:
 - correctness on relevant edge cases
 
 Non-trivial new logic should leave one minimal runnable check. Trivial changes need no extra test.
+
+## Git Commits
+
+- Use Conventional Commits: `type(scope): subject`.
+- Keep the subject to one concise line, imperative mood, no trailing period.
+- Add a body only when it carries information the subject cannot convey; otherwise omit it.
