@@ -635,10 +635,10 @@ binds {
     Mod+Shift+P { power-off-monitors; }
 
     // fcitx5
-    Mod+F1 hotkey-overlay-title="Restart Fcitx5" { spawn-sh "pkill fcitx5 || fcitx5"; }
+    Mod+F1 hotkey-overlay-title="Toggle Fcitx5" { spawn-sh "pkill -x fcitx5 || fcitx5"; }
 
     // waybar
-    Mod+F12 hotkey-overlay-title="Restart Waybar" { spawn-sh "pkill waybar || true && waybar"; }
+    Mod+F12 hotkey-overlay-title="Toggle Waybar" { spawn-sh "pkill -x waybar || waybar"; }
 }
 
 // === miscellaneous ===
