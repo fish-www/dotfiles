@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.84.4",
+  "lastChangelogVersion": "0.85.1",
   "defaultProvider": "deepseek",
   "defaultModel": "deepseek-flash",
   "defaultThinkingLevel": "high",
@@ -9,7 +9,6 @@
     "npm:@gotgenes/pi-permission-system",
     "npm:@ff-labs/pi-fff",
     "npm:pi-context-view",
-    "npm:@cortexkit/pi-magic-context",
     "npm:@narumitw/pi-lsp",
     "https://github.com/ayghri/i-have-adhd"
   ]
