@@ -57,7 +57,8 @@ paru -S --needed --noconfirm \
     waybar ttf-jetbrains-mono-nerd otf-font-awesome \
     qt6ct breeze breeze-icons gnome-themes-extra \
     slurp grim satty mark-shot swayimg \
-    archlinux-xdg-menu
+    archlinux-xdg-menu \
+    linuxqq-wayland-fix-git
 ```
 
 ### init
@@ -150,6 +151,13 @@ chezmoi apply
 使用的是 `linuxqq-nt-bwrap` 包，所以配置了目录映射，手动创建一个 `~/Downloads/QQ` 目录，然后启动 qq，配置下载目录为此目录
 
 也可以直接配置成 `~/Downloads`，不过这样会和其他程序下载的文件混在一起，所以还是放子目录了
+
+装了 `linuxqq-wayland-fix-git` 修复剪贴板等问题，运行下面的命令让 qq 直接启动修复版
+
+```bash
+linuxqq-wayland-fix install     # 覆盖原生 QQ 快捷方式
+linuxqq-wayland-fix uninstall   # 恢复原样
+```
 
 ### pi
 
